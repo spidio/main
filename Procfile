@@ -1,0 +1,1 @@
+web: gunicorn -k tornado web:app --log-file -

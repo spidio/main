@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Please enter the password to continue...</title>
+</head>
+<body>
+	<h2> You need the password for the patreon server... </h2>
+	<input id="pass" type="password" placeholder="password">
+	<button onclick="connect();">Connect to server!</button>
+</body>
+<script>
+function connect()
+{
+	var pass = document.getElementById("pass");
+	if(pass.value == "patreon1")
+	{
+		alert("This password will no longer be availible by November 1st\nTo get a new password, you'll have to become a patron!\n\nWebsite: www.patreon.com/spidio")
+		window.location = "http://patreon.herokuapp.com/";
+	}
+	else
+	{
+		pass.value = "";
+		alert("Error! Password wrong!")
+	}
+}
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Please enter the password to continue...</title>
+</head>
+<body>
+	<h2> Enter password to continue... </h2>
+	<input id="pass" type="password" placeholder="password">
+	<button onclick="connect();">Connect to server!</button>
+</body>
+<script>
+function connect()
+{
+	var pass = document.getElementById("pass");
+	if(pass.value == "secret")
+	{
+		window.location = "http://patreon.herokuapp.com/";
+	}
+	else
+	{
+		pass.value = "";
+		alert("Error! Password wrong!")
+	}
+}
+</script>
+</html>
